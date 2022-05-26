@@ -385,19 +385,33 @@
 //	printf("%d", s);//输出5
 //	return 0;
 //}
-#include <stdio.h>
-enum Sex
-{
-	MALE=1,
-	FEMALE=3,
-	SECRET
-}a,b,c;//MALE,FEMALE,SECRET-枚举常量
+//#include <stdio.h>
+//enum Sex
+//{
+//	MALE=1,
+//	FEMALE=3,
+//	SECRET
+//}a,b,c;//MALE,FEMALE,SECRET-枚举常量
+//int main()
+//{
+//	a = 8;
+//	printf("%d", MALE);//默认0，不可变
+//	printf("%d", FEMALE);//默认1
+//	printf("%d", SECRET);//默认2
+//	printf("%d",a);
+//	return 0;
+//}
 int main()
 {
-	a = 8;
-	printf("%d", MALE);//默认0，不可变
-	printf("%d", FEMALE);//默认1
-	printf("%d", SECRET);//默认2
-	printf("%d",a);
+	FILE*fp;
+	int a;
+	fp = fopen("E:\\\#C\\C\\c\#\\523test\\523test\\523test.c", "r");
+	while (!feof(fp))
+	{
+		a = fgetc(fp);
+		if (!feof(fp))
+			putchar(a);
+	}
+	fclose(fp);
 	return 0;
 }
